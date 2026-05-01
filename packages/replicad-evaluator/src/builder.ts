@@ -169,9 +169,10 @@ try {
     `;
 
     try {
-      return (await codeEvaluator.runInContext(editedText, {})) as
-        | GenericRecord
-        | null;
+      return (await codeEvaluator.runInContext(
+        editedText,
+        {}
+      )) as GenericRecord | null;
     } catch (error) {
       return {};
     }
@@ -292,7 +293,8 @@ try {
     faceIndex: number,
     shapeId = "defaultShape"
   ) => {
-    const face = shapesMemory[shapeId]?.[subshapeIndex]?.shape.faces?.[faceIndex];
+    const face =
+      shapesMemory[shapeId]?.[subshapeIndex]?.shape.faces?.[faceIndex];
     if (!face) return null;
     return {
       type: face.geomType,
@@ -306,7 +308,8 @@ try {
     edgeIndex: number,
     shapeId = "defaultShape"
   ) => {
-    const edge = shapesMemory[shapeId]?.[subshapeIndex]?.shape.edges?.[edgeIndex];
+    const edge =
+      shapesMemory[shapeId]?.[subshapeIndex]?.shape.edges?.[edgeIndex];
     if (!edge) return null;
     return {
       type: edge.geomType,
