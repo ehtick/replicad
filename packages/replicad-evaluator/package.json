@@ -21,7 +21,7 @@
     }
   },
   "peerDependencies": {
-    "replicad": "workspace:^"
+    "replicad": "*"
   },
   "dependencies": {
     "@rollup/browser": "^4.52.5",
